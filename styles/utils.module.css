@@ -1,0 +1,85 @@
+.heading2Xl {
+  font-size: 2.5rem;
+  line-height: 1.2;
+  font-weight: 800;
+  letter-spacing: -0.05rem;
+  margin: 1rem 0;
+}
+
+.headingXl {
+  font-size: 2rem;
+  line-height: 1.3;
+  font-weight: 800;
+  letter-spacing: -0.05rem;
+  margin: 1rem 0;
+}
+
+.headingLg {
+  font-size: 1.5rem;
+  line-height: 1.4;
+  margin: 1rem 0;
+}
+
+.headingMd {
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+.borderCircle {
+  border-radius: 9999px;
+}
+
+.colorInherit {
+  color: inherit;
+}
+
+.padding1px {
+  padding-top: 1px;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.listItem {
+  margin: 0 0 1.25rem;
+}
+
+.lightText {
+  color: #666;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 40%;
+  height: auto;
+  border: 1px solid #cc94cc;
+  border-radius: 2.5%;
+  box-shadow: 0 0 12px lightgrey;
+  padding: 0 0 0 3%;
+  margin: 2% 0 2% 0;
+}
+
+.cardTitle {
+  font-size: 1.3em;
+  font-weight: 550;
+  margin-top: 3%;
+  cursor: pointer;
+}
+
+.cardContent {
+  font-size: 0.8em;
+  font-style: italic;
+  margin: 0;
+}
+
+.flexGrid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
