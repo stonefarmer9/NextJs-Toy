@@ -12,6 +12,7 @@ export async function getStaticProps() {
         monsters {
           name
           challenge_rating
+          index
         }
       }
     `,
@@ -34,7 +35,7 @@ export default function MonsterList({ monsters }) {
           return (
             <Link
               key={monster.index}
-              href={`/Dungeons&Dragons/${monster.name}`}
+              href={`/Dungeons&Dragons/${monster.index}`}
             >
               <div className={utilStyles.card}>
                 <p className={utilStyles.cardTitle}>{monster.name}</p>

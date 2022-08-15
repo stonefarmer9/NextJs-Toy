@@ -9,7 +9,7 @@ import Link from "next/link";
 export async function getServerSideProps({ params }) {
   const { data } = await dndClient.query({
     query: GET_MONSTER,
-    variables: { filter: { name: params.monster } },
+    variables: { monsterIndex: params.monster },
   });
   return {
     props: {
@@ -25,10 +25,12 @@ export default function Monster({ monster }) {
         <title>{monster.name}</title>
       </Head>
       <h2>{monster.name}</h2>
-      <div>
+      <section>{monster.desc}</section>
+
+      <section>
         <table>
           <thead>
-            <tr key="123">
+            <tr>
               <th>Str</th>
               <th>Dex</th>
               <th>Con</th>
@@ -38,7 +40,7 @@ export default function Monster({ monster }) {
             </tr>
           </thead>
           <tbody>
-            <tr key="456">
+            <tr>
               <td>{monster.strength}</td>
               <td>{monster.dexterity}</td>
               <td>{monster.constitution}</td>
@@ -48,18 +50,20 @@ export default function Monster({ monster }) {
             </tr>
           </tbody>
         </table>
-      </div>
-      <div>
+      </section>
+      <section>
         {monster.actions.map((action, index) => {
           return (
             <div key={`${action.name} ${index}`}>
-              <p>{action.name}</p>
-              <p>{action.desc}</p>
-              <p>{action.attack_bonus}</p>
+              <span>
+                <p>
+                  {action.name}: <p>{action.desc}</p>
+                </p>
+              </span>
             </div>
           );
         })}
-      </div>
+      </section>
 
       <div className={styles.backToHome}>
         <Link href={"/Dungeons&Dragons/MonsterListSSG"}>
