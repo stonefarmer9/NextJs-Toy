@@ -63,7 +63,7 @@ export default function Layout({ children, home }: LayoutProps) {
           </>
         )}
       </header>
-      <main>{children}</main>
+      <main className={styles.scrollingContainer}>{children}</main>
       {!home && (
         <div className={styles.backToHome}>
           <Link href="/">

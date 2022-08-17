@@ -47,11 +47,6 @@ export default function Monster({ branches }) {
             <tbody>
               {branches.queryForBranchManager.map((branchAndManager) => {
                 const { branch } = branchAndManager;
-                console.log(
-                  "%c[manager].tsx line:50 branch.websiteUrl",
-                  "color: #007acc;",
-                  branch.websiteUrl
-                );
                 return (
                   <tr key={branch.id}>
                     <td>{branch.name}</td>

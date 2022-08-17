@@ -16,3 +16,8 @@
 .backToHome {
   margin: 3rem 0 0;
 }
+
+.scrollingContainer {
+  overflow: scroll;
+  height: 80vh;
+}
